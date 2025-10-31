@@ -111,6 +111,7 @@ Want to get this project running on your local machine? Follow these simple step
 3.  **Set up your environment variables:**
     Create a `.env.local` file in the root of your project and add the following keys:
     ```env
+    OPENAI_API_KEY="your_openai_api_key_here"
     MISTRAL_API_KEY="your_mistral_api_key_here"
     GITHUB_TOKEN="your_github_token_here"
     ```
