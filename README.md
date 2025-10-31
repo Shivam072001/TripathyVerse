@@ -100,7 +100,7 @@ Want to get this project running on your local machine? Follow these simple step
 1.  **Clone the repository:**
     ```sh
     git clone https://github.com/Shivam072001/TripathyVerse.git
-    cd portfolio
+    cd TripathyVerse
     ```
 
 2.  **Install dependencies:**
