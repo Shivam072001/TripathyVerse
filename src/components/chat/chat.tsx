@@ -1,9 +1,9 @@
 'use client';
 import { useChat } from '@ai-sdk/react';
-import { AnimatePresence, motion } from 'framer-motion';
+import { AnimatePresence, easeOut, motion } from 'framer-motion';
 import dynamic from 'next/dynamic';
 import { useSearchParams } from 'next/navigation';
-import React, { useEffect, useMemo, useRef, useState } from 'react';
+import React, { ReactNode, useEffect, useMemo, useRef, useState } from 'react';
 import { toast } from 'sonner';
 
 // Component imports
@@ -22,8 +22,7 @@ import HelperBoost from './HelperBoost';
 import Image from 'next/image';
 
 // ClientOnly component for client-side rendering
-//@ts-ignore
-const ClientOnly = ({ children }) => {
+const ClientOnly = ({ children }: { children: ReactNode }) => {
   const [hasMounted, setHasMounted] = useState(false);
 
   useEffect(() => {
@@ -44,10 +43,16 @@ interface AvatarProps {
   isTalking: boolean;
 }
 
+declare global {
+  interface Window {
+    MSStream?: unknown;
+  }
+}
+
 // Dynamic import of Avatar component
 const Avatar = dynamic<AvatarProps>(
   () =>
-    Promise.resolve(({ hasActiveTool, videoRef, isTalking }: AvatarProps) => {
+    Promise.resolve(({ hasActiveTool, videoRef }: AvatarProps) => {
       // This function will only execute on the client
       const isIOS = () => {
         // Multiple detection methods
@@ -57,7 +62,6 @@ const Avatar = dynamic<AvatarProps>(
 
         // UserAgent-based check
         const isIOSByUA =
-          //@ts-ignore
           /iPad|iPhone|iPod/.test(userAgent) && !window.MSStream;
 
         // Platform-based check
@@ -65,8 +69,9 @@ const Avatar = dynamic<AvatarProps>(
 
         // iPad Pro check
         const isIPadOS =
-          //@ts-ignore
-          platform === 'MacIntel' && maxTouchPoints > 1 && !window.MSStream;
+          platform === 'MacIntel' &&
+          maxTouchPoints > 1 &&
+          (!window.MSStream);
 
         // Safari check
         const isSafari = /Safari/.test(userAgent) && !/Chrome/.test(userAgent);
@@ -114,7 +119,7 @@ const MOTION_CONFIG = {
   exit: { opacity: 0, y: 20 },
   transition: {
     duration: 0.3,
-    ease: 'easeOut',
+    ease: easeOut,
   },
 };
 
@@ -130,10 +135,8 @@ const Chat = () => {
     messages,
     input,
     handleInputChange,
-    handleSubmit,
     isLoading,
     stop,
-    setMessages,
     setInput,
     reload,
     addToolResult,
@@ -214,8 +217,8 @@ const Chat = () => {
       )
   );
 
-  //@ts-ignore
-  const submitQuery = (query) => {
+  
+  const submitQuery = (query: string) => {
     if (!query.trim() || isToolInProgress) return;
     setLoadingSubmit(true);
     append({
@@ -237,7 +240,7 @@ const Chat = () => {
       setInput('');
       submitQuery(initialQuery);
     }
-  }, [initialQuery, autoSubmitted]);
+  }, [initialQuery, autoSubmitted, submitQuery, setInput]);
 
   useEffect(() => {
     if (videoRef.current) {
@@ -251,8 +254,8 @@ const Chat = () => {
     }
   }, [isTalking]);
 
-  //@ts-ignore
-  const onSubmit = (e) => {
+  
+  const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!input.trim() || isToolInProgress) return;
     submitQuery(input);

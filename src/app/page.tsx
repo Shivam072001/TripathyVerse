@@ -4,7 +4,7 @@ import FluidCursor from '@/components/FluidCursor';
 import { Button } from '@/components/ui/button';
 import { GithubButton } from '@/components/ui/github-button';
 import WelcomeModal from '@/components/welcome-modal';
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 import {
   ArrowRight,
   BriefcaseBusiness,
@@ -45,7 +45,7 @@ export default function Home() {
     router.push(`/chat?query=${encodeURIComponent(query)}`);
 
   /* hero animations (unchanged) */
-  const topElementVariants = {
+  const topElementVariants: Variants = {
     hidden: { opacity: 0, y: -60 },
     visible: {
       opacity: 1,
@@ -53,7 +53,7 @@ export default function Home() {
       transition: { type: 'tween', ease: 'easeOut', duration: 0.8 },
     },
   };
-  const bottomElementVariants = {
+  const bottomElementVariants: Variants = {
     hidden: { opacity: 0, y: 80 },
     visible: {
       opacity: 1,
@@ -131,7 +131,7 @@ export default function Home() {
         </div>
 
         <h2 className="text-secondary-foreground mt-1 text-xl font-semibold md:text-2xl">
-          Hey, I'm Shivam Tripathy 👋
+          {`Hey, I'm Shivam Tripathy 👋`}
         </h2>
         <h1 className="text-4xl font-bold sm:text-5xl md:text-6xl lg:text-7xl">
           AI Portfolio

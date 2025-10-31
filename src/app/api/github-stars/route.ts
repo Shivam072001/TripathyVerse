@@ -1,4 +1,4 @@
-export async function GET(req: Request) {
+export async function GET() {
   const res = await fetch('https://github.com/Shivam072001/TripathyVerse', {
     headers: {
       Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,

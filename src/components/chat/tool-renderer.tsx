@@ -6,16 +6,21 @@ import { Presentation } from '../presentation';
 import AllProjects from '../projects/AllProjects';
 import Resume from '../resume';
 import Skills from '../skills';
-import Sports from '../sport';
+
+export interface ToolInvocation {
+  toolCallId: string;
+  toolName: string;
+  result?: unknown;
+  state?: string;
+}
 
 interface ToolRendererProps {
-  toolInvocations: any[];
+  toolInvocations: ToolInvocation[];
   messageId: string;
 }
 
 export default function ToolRenderer({
   toolInvocations,
-  messageId,
 }: ToolRendererProps) {
   return (
     <div className="w-full transition-all duration-300">

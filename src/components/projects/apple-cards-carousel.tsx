@@ -10,6 +10,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 import Image, { ImageProps } from 'next/image';
 import React, {
   createContext,
+  useCallback,
   useContext,
   useEffect,
   useRef,
@@ -140,9 +141,9 @@ export const Carousel = ({
                     duration: 0.5,
                     delay: 0.2 * index,
                     ease: 'easeOut',
-                    once: true,
                   },
                 }}
+                viewport={{once: true}}
                 key={'card' + index}
                 className="rounded-3xl last:pr-[5%] md:last:pr-[33%]"
               >
@@ -183,7 +184,16 @@ export const Card = ({
 }) => {
   const [open, setOpen] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
-  const { onCardClose, currentIndex } = useContext(CarouselContext);
+  const { onCardClose } = useContext(CarouselContext);
+
+  const handleClose = useCallback(() => {
+    setOpen(false);
+    onCardClose(index);
+  }, [index, onCardClose]);
+
+    const handleOpen = () => {
+    setOpen(true);
+  };
 
   useEffect(() => {
     function onKeyDown(event: KeyboardEvent) {
@@ -200,19 +210,9 @@ export const Card = ({
 
     window.addEventListener('keydown', onKeyDown);
     return () => window.removeEventListener('keydown', onKeyDown);
-  }, [open]);
+  }, [open, handleClose]);
 
-  //@ts-ignore
-  useOutsideClick(containerRef, () => handleClose());
-
-  const handleOpen = () => {
-    setOpen(true);
-  };
-
-  const handleClose = () => {
-    setOpen(false);
-    onCardClose(index);
-  };
+  useOutsideClick(containerRef, handleClose);
 
   return (
     <>

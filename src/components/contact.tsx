@@ -2,7 +2,7 @@
 
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Mail, Phone, Linkedin, Github, Instagram, MapPin } from 'lucide-react';
+import { Mail, Phone, Linkedin, Github, MapPin } from 'lucide-react';
 
 export function Contact() {
   const contactInfo = [
@@ -48,7 +48,7 @@ export function Contact() {
       <div className="text-center space-y-2">
         <h2 className="text-2xl font-bold">Get in Touch</h2>
         <p className="text-muted-foreground">
-          I'm always excited to connect with fellow tech enthusiasts, discuss opportunities, or just chat about the latest in AI and Full Stack Development!
+          {`I'm always excited to connect with fellow tech enthusiasts, discuss opportunities, or just chat about the latest in AI and Full Stack Development!`}
         </p>
       </div>
 
@@ -82,7 +82,7 @@ export function Contact() {
 
       <div className="text-center space-y-4 pt-6">
         <div className="bg-accent rounded-lg p-6">
-          <h3 className="font-semibold mb-2">What I'm Looking For</h3>
+          <h3 className="font-semibold mb-2">{`What I'm Looking For`}</h3>
           <p className="text-sm text-muted-foreground">
             • Data Science & AI opportunities • AI Automation projects • Full-stack development roles • 
             Open source contributions • Tech community connections
@@ -91,7 +91,7 @@ export function Contact() {
         
         <p className="text-sm text-muted-foreground">
           Feel free to reach out for collaborations, job opportunities, or just to discuss the latest in tech! 
-          I'm particularly interested in projects that combine AI/ML with real-world impact.
+          {`I'm particularly interested in projects that combine AI/ML with real-world impact.`}
         </p>
       </div>
     </div>
