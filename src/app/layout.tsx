@@ -1,16 +1,16 @@
-import { Analytics } from "@vercel/analytics/react"
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import { cn } from "@/lib/utils";
-import { ThemeProvider } from "@/components/theme-provider";
-import { Toaster } from "@/components/ui/sonner";
-import Script from "next/script";
-import "./globals.css";
+import { Analytics } from '@vercel/analytics/react';
+import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
+import { cn } from '@/lib/utils';
+import { ThemeProvider } from '@/components/theme-provider';
+import { Toaster } from '@/components/ui/sonner';
+import Script from 'next/script';
+import './globals.css';
 
 // Load Inter font for non-Apple devices
-const inter = Inter({ 
-  subsets: ["latin"],
-  variable: "--font-inter",
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
 });
 
 export const metadata: Metadata = {
@@ -32,14 +32,14 @@ export const metadata: Metadata = {
   authors: [
     {
       name: 'Shivam Tripathy',
-      url: '', // <- To Do
+      url: 'https://tripathy-verse.vercel.app/',
     },
   ],
   creator: 'Shivam Tripathy',
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: '', // <- To Do
+    url: 'https://tripathy-verse.vercel.app/',
     title: 'Shivam Tripathy Portfolio',
     description:
       'Interactive portfolio with an AI-powered Memoji that answers questions about me',
@@ -72,7 +72,10 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+        />
         <link rel="icon" href="/Logo.svg" sizes="any" />
         {/* Google Analytics */}
         <Script
@@ -96,8 +99,8 @@ export default function RootLayout({
       <body
         className={cn(
           // "min-h-screen bg-background font-sans antialiased",
-          "min-h-screen bg-white text-black dark:bg-black dark:text-white font-sans antialiased transition-colors duration-500 ease-in-out",
-          inter.variable,
+          'min-h-screen bg-white font-sans text-black antialiased transition-colors duration-500 ease-in-out dark:bg-black dark:text-white',
+          inter.variable
         )}
       >
         <ThemeProvider
@@ -105,9 +108,7 @@ export default function RootLayout({
           defaultTheme="light"
           enableSystem={false}
         >
-          <main className="flex min-h-screen flex-col">
-            {children}
-          </main>
+          <main className="flex min-h-screen flex-col">{children}</main>
           <Toaster />
         </ThemeProvider>
         <Analytics />
