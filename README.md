@@ -114,6 +114,7 @@ Want to get this project running on your local machine? Follow these simple step
     MISTRAL_API_KEY="your_mistral_api_key_here"
     GITHUB_TOKEN="your_github_token_here"
     ```
+    *   Get your OpenAI API Key from [admin.openai.ai](https://platform.openai.com/api-keys).
     *   Get your Mistral API Key from [admin.mistral.ai](https://admin.mistral.ai/organization/api-keys).
     *   Generate your GitHub Token at [github.com/settings/tokens](https://github.com/settings/personal-access-tokens).
 
