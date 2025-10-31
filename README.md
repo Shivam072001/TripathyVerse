@@ -2,7 +2,7 @@
 
   <br />
   <p>
-    <a href=""><img src="assets/readme-photo.png" alt="AI Portfolio Banner" width="100%"/></a>
+    <a href=""><img src="assets/readme-phot.png" alt="AI Portfolio Banner" width="100%"/></a>
   </p>
   <br />
 
