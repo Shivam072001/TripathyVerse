@@ -1,0 +1,83 @@
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+package-lock.json
+.pnpm-debug.log
+
+# Next.js build / output
+.next/
+out/
+dist/
+
+# Production env files (keep .env.example)
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.*.local
+
+# General env and secret files
+.env
+.env.*.secret
+*.pem
+*.key
+*.crt
+
+# Vercel / Now / deployment
+.vercel/
+.now/
+
+# Next.js telemetry & caches
+.next/cache/
+.cache/
+.parcel-cache/
+turbo/
+.turbo/
+.cache-loader/
+
+# Logs, coverage
+logs/
+*.log
+coverage/
+coverage-final.json
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDEs / Editors
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Editors swap / temp
+*~
+*.swp
+*.swo
+
+# Build-system files
+build/
+tmp/
+temp/
+
+# Storybook
+storybook-static/
+
+# Mac / Linux metadata
+.Spotlight-V100
+.Trashes
+
+# Optional: lockfiles for alternative package managers (uncomment if you use them)
+# yarn.lock
+# pnpm-lock.yaml
+
+# Optional: local test artifacts
+jest.config.js.snap
+coverage/
+
+# Optional: local binaries
+/.pnp.*
