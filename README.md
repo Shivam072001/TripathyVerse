@@ -14,8 +14,8 @@
 ### **Badges**
 
 <p align="center">
-  <img src="https://img.shields.io/github/repo-size/Shivam072001/Shivam072001?style=for-the-badge" alt="Repo Size">
-  <img src="https://img.shields.io/github/license/Shivam072001/Shivam072001?style=for-the-badge" alt="License">
+  <img src="https://img.shields.io/github/repo-size/Shivam072001/TripathyVerse?style=for-the-badge" alt="Repo Size">
+  <img src="https://img.shields.io/github/license/Shivam072001/TripathyVerse?style=for-the-badge" alt="License">
   
   <a href="https://react.dev/">
     <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React">
@@ -33,20 +33,20 @@
     <img src="https://img.shields.io/badge/Mistral-FF7E00?style=for-the-badge&logo=mistralai&logoColor=white" alt="Mistral API">
   </a>
 
-  <a href="https://github.com/Shivam072001/Shivam072001/stargazers">
-    <img src="https://img.shields.io/github/stars/Shivam072001/Shivam072001?style=for-the-badge&color=ffd700" alt="Repo Stars">
+  <a href="https://github.com/Shivam072001/TripathyVerse/stargazers">
+    <img src="https://img.shields.io/github/stars/Shivam072001/TripathyVerse?style=for-the-badge&color=ffd700" alt="Repo Stars">
   </a>
-  <a href="https://github.com/Shivam072001/Shivam072001/graphs/contributors">
-    <img src="https://img.shields.io/github/contributors/Shivam072001/Shivam072001?style=for-the-badge&color=ff69b4" alt="Contributors">
+  <a href="https://github.com/Shivam072001/TripathyVerse/graphs/contributors">
+    <img src="https://img.shields.io/github/contributors/Shivam072001/TripathyVerse?style=for-the-badge&color=ff69b4" alt="Contributors">
   </a>
-  <a href="https://github.com/Shivam072001/Shivam072001/forks">
-    <img src="https://img.shields.io/github/forks/Shivam072001/Shivam072001?style=for-the-badge&color=00bfff" alt="Forks">
+  <a href="https://github.com/Shivam072001/TripathyVerse/forks">
+    <img src="https://img.shields.io/github/forks/Shivam072001/TripathyVerse?style=for-the-badge&color=00bfff" alt="Forks">
   </a>
-  <a href="https://github.com/Shivam072001/Shivam072001/issues">
-    <img src="https://img.shields.io/github/issues/Shivam072001/Shivam072001?style=for-the-badge&color=ff4500" alt="Issues">
+  <a href="https://github.com/Shivam072001/TripathyVerse/issues">
+    <img src="https://img.shields.io/github/issues/Shivam072001/TripathyVerse?style=for-the-badge&color=ff4500" alt="Issues">
   </a>
-  <a href="https://github.com/Shivam072001/Shivam072001/pulls">
-    <img src="https://img.shields.io/github/issues-pr/Shivam072001/Shivam072001?style=for-the-badge&color=32cd32" alt="Pull Requests">
+  <a href="https://github.com/Shivam072001/TripathyVerse/pulls">
+    <img src="https://img.shields.io/github/issues-pr/Shivam072001/TripathyVerse?style=for-the-badge&color=32cd32" alt="Pull Requests">
   </a>
 </p>
 
